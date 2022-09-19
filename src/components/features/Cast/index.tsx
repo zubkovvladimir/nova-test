@@ -13,15 +13,17 @@ const Cast: FC = () => (
     </div>
 
     <article>
-      <picture>
-        <source srcSet={geraltWebP} type="image/webp" />
-        <img alt="geralt" src={geralt} />
-      </picture>
+      <a href="/">
+        <picture>
+          <source srcSet={geraltWebP} type="image/webp" />
+          <img alt="geralt" src={geralt} />
+        </picture>
 
-      <p>
-        <span>Геральт</span>
-        <span>Генри Кавилл</span>
-      </p>
+        <p>
+          <span>Геральт</span>
+          <span>Генри Кавилл</span>
+        </p>
+      </a>
     </article>
   </section>
 );

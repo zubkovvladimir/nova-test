@@ -1,14 +1,14 @@
 import { FC } from 'react';
 
-import HeaderLogo from 'assets/images/logo.png';
+import Cover from 'assets/images/promo.jpg';
 import { useTitle } from 'ahooks';
 import { appName } from 'constants/app';
 
-import classes from './MainPage.module.scss';
+import classes from './Promo.module.scss';
 import { Button } from 'components/shared/Button';
 
 const Promo: FC = () => (
-  <section>
+  <section className={classes.promo}>
     <div>
       <h2 className="test">Сериал Ведьмак</h2>
 
@@ -18,6 +18,8 @@ const Promo: FC = () => (
       </p>
 
       <Button>Смотреть сериал</Button>
+
+      <img src={Cover} alt="Обложка" />
     </div>
   </section>
 );

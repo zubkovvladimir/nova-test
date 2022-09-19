@@ -8,7 +8,10 @@
 
 :root {
   --white: rgba(255, 255, 255, 1);
-  --black: rgb(0, 0, 0);
+  --black: rgba(0, 0, 0, 1);
+  --black-1: rgba(24, 24, 24, 1);
+  --gray: rgba(52, 51, 56, 1);
+  --gray-1: rgba(133, 139, 138, 1);
 }
 
 html {
@@ -30,9 +33,9 @@ body {
   font-size: $base-font-size;
   line-height: 24px;
   font-weight: 600;
-  color: var(--black);
+  color: var(--white);
 
-  background-color: var(--white);
+  background-color: var(--black-1);
 }
 
 img {
