@@ -1,15 +1,13 @@
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/open-sans-v34-latin_cyrillic-regular.woff') format('woff'),
-    url('../fonts/open-sans-v34-latin_cyrillic-regular.woff2') format('woff2');
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPT-Book.woff') format('woff'), url('../fonts/FuturaPT-Book.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/open-sans-v34-latin_cyrillic-700.woff') format('woff'),
-    url('../fonts/open-sans-v34-latin_cyrillic-700.woff2') format('woff2');
-  font-weight: 700;
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPT-Demi.woff') format('woff'), url('../fonts/FuturaPT-Demi.woff2') format('woff2');
+  font-weight: 600;
   font-style: normal;
 }
