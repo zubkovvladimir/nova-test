@@ -5,7 +5,7 @@
  */
 function getImagesPreset() {
   return {
-    test: /\.(jpe?g|png|gif)$/i,
+    test: /\.(jpe?g|png|webp|gif)$/i,
     type: 'asset/resource',
   };
 }
