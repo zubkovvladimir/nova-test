@@ -10,21 +10,10 @@ const MainLayout: FC = () => {
   };
 
   return (
-    // <Layout className="layout">
-    //   <Header collapsed={drawerIsCollapsed} toggle={toggle} />
-
-    //   <Layout style={{ marginTop: 10 }}>
-    //     <Sider className="layout__sider" collapsed={drawerIsCollapsed} collapsible trigger={null}>
-    //       <SideMenu />
-    //     </Sider>
-    //     <Content className="layout__content">
-    //       <Suspense fallback={<Spin />}>
-    //         <Outlet />
-    //       </Suspense>
-    //     </Content>
-    //   </Layout>
-    // </Layout>
-    <div>MainLayout</div>
+    <div>
+      <p>MainLayout</p>
+      <Outlet />
+    </div>
   );
 };
 

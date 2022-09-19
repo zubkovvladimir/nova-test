@@ -6,7 +6,7 @@ import { Routes } from 'constants/routes';
 const MainLayout = lazy(() => import(/* webpackChunkName: "main'" */ 'layouts/MainLayout'));
 
 const NotFoundPage = lazy(() => import(/* webpackChunkName: "404" */ 'pages/NotFoundPage'));
-const MainPage = lazy(() => import(/* webpackChunkName: "start" */ 'pages/MainPage'));
+const MainPage = lazy(() => import(/* webpackChunkName: "main'" */ 'pages/MainPage'));
 
 const routes: RouteObject[] = [
   {
@@ -15,7 +15,7 @@ const routes: RouteObject[] = [
     children: [
       {
         index: true,
-        path: Routes.books,
+        path: Routes.main,
         element: <MainPage />,
       },
       {
