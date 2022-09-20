@@ -1,0 +1,69 @@
+@import 'assets/scss/mixins';
+
+.container {
+  max-width: $mobile-width;
+  margin: 0 auto;
+  width: 80%;
+
+  @include tablet {
+    max-width: $tablet-width;
+    width: 100%;
+    padding: 0 80px;
+  }
+
+  @include desktop {
+    max-width: $desktop-width;
+    width: 100%;
+    padding: 0 80px;
+  }
+
+  //   &.--center-collumn-elements {
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+
+  //     @include desktop {
+  //       align-items: start;
+  //     }
+  //   }
+
+  //   @include desktop {
+  //     width: 100%;
+  //     padding: 0 80px;
+  //   }
+
+  //   &.--no-paddings {
+  //     @include desktop {
+  //       padding: 0;
+  //     }
+
+  //     @include tablet {
+  //       padding: 0 30px;
+  //     }
+
+  //     @include big-phone {
+  //       padding: 0 15px;
+  //     }
+  //   }
+
+  //   &.--footer {
+  //     @include desktop {
+  //       width: 95%;
+  //       padding: 0;
+  //     }
+
+  //     @include tablet {
+  //       width: 100%;
+  //       padding: 0 45px;
+  //     }
+  //   }
+
+  //   @include tablet {
+  //     width: 100%;
+  //     padding: 0 30px;
+  //   }
+
+  //   @include big-phone {
+  //     padding: 0 15px;
+  //   }
+}
