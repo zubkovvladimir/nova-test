@@ -1,0 +1,9 @@
+@import 'assets/scss/functions';
+
+.title {
+  font-size: rem(40);
+
+  &.--mb-40 {
+    margin-bottom: 40px;
+  }
+}
