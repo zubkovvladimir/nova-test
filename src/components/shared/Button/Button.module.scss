@@ -34,10 +34,22 @@
   }
 
   &--small {
-    padding: 12px 32px;
+    padding: 12px 25px;
+
+    @include tablet {
+      padding: 12px 32px;
+    }
   }
 
   &--normal {
-    padding: 16px 42px;
+    padding: 16px 33px;
+
+    @include tablet {
+      padding: 16px 40px;
+    }
+
+    @include desktop {
+      padding: 12px 32px;
+    }
   }
 }

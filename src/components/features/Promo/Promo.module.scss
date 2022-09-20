@@ -1,14 +1,20 @@
 @import 'assets/scss/functions';
+@import 'assets/scss/mixins';
 
 .promo {
   position: relative;
 
-  background: url('assets/images/promo.jpg');
+  background-image: url('assets/images/promo-1.jpg');
   background-repeat: no-repeat;
   background-color: var(--gray-1);
   background-size: cover;
-  background-position-x: 50%;
+  background-position-x: 64%;
   background-position-y: 50%;
+
+  @include desktop {
+    background-position-x: 50%;
+    background-image: url('assets/images/promo.jpg');
+  }
 
   &__info {
     max-width: 424px;
@@ -16,19 +22,44 @@
   }
 
   &__inner {
-    min-height: 440px;
+    min-height: 353px;
     display: flex;
     align-items: center;
+
+    @include tablet {
+      min-height: 360px;
+    }
+
+    @include desktop {
+      min-height: 440px;
+    }
   }
 
   &__title {
     margin-bottom: 24px;
-    font-size: rem(56);
+    font-size: rem(32);
+
+    @include tablet {
+      font-size: rem(40);
+    }
+
+    @include desktop {
+      font-size: rem(56);
+    }
   }
 
   &__description {
     margin-bottom: 40px;
     font-weight: 400;
+    max-width: 280px;
+
+    @include tablet {
+      max-width: 370px;
+    }
+
+    @include desktop {
+      max-width: 424px;
+    }
   }
 
   &__filter {

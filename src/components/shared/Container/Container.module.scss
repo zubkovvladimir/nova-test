@@ -7,61 +7,11 @@
 
   @include tablet {
     max-width: $tablet-width;
-    padding: 0 80px;
+    padding: 0 64px;
   }
 
   @include desktop {
     max-width: $desktop-width;
-    padding: 0 80px;
+    padding: 0 120px;
   }
-
-  //   &.--center-collumn-elements {
-  //     display: flex;
-  //     flex-direction: column;
-  //     align-items: center;
-
-  //     @include desktop {
-  //       align-items: start;
-  //     }
-  //   }
-
-  //   @include desktop {
-  //     width: 100%;
-  //     padding: 0 80px;
-  //   }
-
-  //   &.--no-paddings {
-  //     @include desktop {
-  //       padding: 0;
-  //     }
-
-  //     @include tablet {
-  //       padding: 0 30px;
-  //     }
-
-  //     @include big-phone {
-  //       padding: 0 15px;
-  //     }
-  //   }
-
-  //   &.--footer {
-  //     @include desktop {
-  //       width: 95%;
-  //       padding: 0;
-  //     }
-
-  //     @include tablet {
-  //       width: 100%;
-  //       padding: 0 45px;
-  //     }
-  //   }
-
-  //   @include tablet {
-  //     width: 100%;
-  //     padding: 0 30px;
-  //   }
-
-  //   @include big-phone {
-  //     padding: 0 15px;
-  //   }
 }
