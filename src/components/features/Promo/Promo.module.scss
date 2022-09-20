@@ -11,6 +11,8 @@
   background-position-x: 64%;
   background-position-y: 50%;
 
+  margin-bottom: 72px;
+
   @include desktop {
     background-position-x: 50%;
     background-image: url('assets/images/promo.jpg');

@@ -3,9 +3,8 @@
 .header {
   background-color: var(--black);
 
-  min-height: 80px;
-
   &__inner {
+    min-height: 80px;
     display: flex;
     justify-content: space-between;
     padding: 12px 0;

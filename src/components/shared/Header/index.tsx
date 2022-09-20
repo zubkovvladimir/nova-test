@@ -11,7 +11,7 @@ const Header: FC = () => (
       <div className={classes.header__inner}>
         <Logo />
 
-        <Button variant="outlined" size="small">
+        <Button size="small" variant="outlined">
           Подключить подписку
         </Button>
       </div>
