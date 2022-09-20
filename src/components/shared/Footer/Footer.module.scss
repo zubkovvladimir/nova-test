@@ -1,12 +1,54 @@
+@import 'assets/scss/mixins';
+
 .footer {
   background-color: var(--gray);
+  padding: 24px 0;
+
+  @include tablet {
+    padding: 40px 0;
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__social {
     display: flex;
+    align-items: center;
+    margin-left: 50%;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  &__privacy {
+    order: 2;
+    margin-top: 26px;
+
+    @include tablet {
+      order: 0;
+      max-width: 183px;
+      margin-top: 0;
+    }
+  }
+
+  &__social-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__link {
+    display: flex;
+
+    svg {
+      transition: var(--transition-fast);
+      fill: var(--white);
+    }
+
+    &:hover svg {
+      fill: var(--orange);
+    }
   }
 }

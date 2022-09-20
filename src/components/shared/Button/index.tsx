@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import classes from './Button.module.scss';
 
-type ButtonVariant = 'primary' | 'outlined';
+type ButtonVariant = 'primary' | 'outlined' | 'link';
 
 type ButtonSize = 'normal' | 'small';
 
@@ -28,7 +28,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       type={type}
       {...props}
     >
-      {children}
+      <span
+        className={cx({
+          [classes['btn--underline']]: variant === 'link',
+        })}
+      >
+        {children}
+      </span>
     </button>
   ),
 );

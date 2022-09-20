@@ -8,6 +8,7 @@
   font-weight: inherit;
   transition: var(--transition-fast);
   outline: none;
+  border: none;
 
   &--outlined {
     background-color: var(--orange-opacity-015);
@@ -51,5 +52,19 @@
     @include desktop {
       padding: 12px 32px;
     }
+  }
+
+  &--link {
+    font-size: rem(14);
+    font-weight: 400;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &--underline {
+    border-bottom: 1px solid var(--white);
   }
 }

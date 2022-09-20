@@ -1,9 +1,8 @@
-import { FC, Suspense, useEffect, useState } from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { FC } from 'react';
+import { Outlet } from 'react-router-dom';
 
-import { Routes } from 'constants/routes';
-import Header from 'components/shared/Header';
 import Footer from 'components/shared/Footer';
+import Header from 'components/shared/Header';
 
 const MainLayout: FC = () => (
   <>

@@ -1,3 +1,5 @@
+@import 'assets/scss/mixins';
+
 .logo {
   display: flex;
   align-items: center;
@@ -5,5 +7,10 @@
   &__img {
     height: 36px;
     width: 106px;
+
+    @include tablet {
+      height: 44px;
+      width: 130px;
+    }
   }
 }
