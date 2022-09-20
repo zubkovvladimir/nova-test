@@ -2,16 +2,34 @@
 @import 'assets/scss/mixins';
 
 .btn {
-  font-weight: normal;
   cursor: pointer;
   background-color: transparent;
   color: inherit;
+  font-weight: inherit;
   padding: 12px 32px;
+  transition: var(--transition-fast);
 
   &--outlined {
     background-color: var(--orange-opacity-015);
     border: 1px solid var(--orange-opacity-08);
 
     min-width: 208px;
+
+    &:hover {
+      box-shadow: --var(--shadow-orange-opacity-015);
+      background-color: var(--orange);
+    }
+  }
+
+  &--primary {
+    background-color: var(--orange-1);
+    border: 1px solid var(--orange-opacity-08);
+
+    min-width: 208px;
+
+    &:hover {
+      box-shadow: --var(--shadow-orange-opacity-015);
+      background-color: var(--orange);
+    }
   }
 }

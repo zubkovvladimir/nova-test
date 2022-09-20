@@ -6,7 +6,7 @@ import classes from './Logo.module.scss';
 
 const Logo: FC = () => (
   <a className={classes.logo} href="/">
-    <img className={classes.logo__img} alt="Ведьмак" height="44" src={HeaderLogo} width="130" />
+    <img alt="Ведьмак" className={classes.logo__img} height="44" src={HeaderLogo} width="130" />
   </a>
 );
 

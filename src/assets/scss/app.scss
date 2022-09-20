@@ -7,13 +7,22 @@
 @import 'functions';
 
 :root {
+  // colors
   --white: rgba(255, 255, 255, 1);
   --black: rgba(0, 0, 0, 1);
   --black-1: rgba(24, 24, 24, 1);
   --gray: rgba(52, 51, 56, 1);
   --gray-1: rgba(133, 139, 138, 1);
+  --orange: rgba(255, 30, 30, 1);
+  --orange-1: rgba(236, 63, 63, 1);
   --orange-opacity-08: rgba(236, 63, 63, 0.8);
   --orange-opacity-015: rgba(236, 63, 63, 0.15);
+
+  // shadows
+  --shadow-orange-opacity-015: rgba(236, 63, 63, 0.15);
+
+  // transitions
+  --transition-fast: 0.3s;
 }
 
 html {

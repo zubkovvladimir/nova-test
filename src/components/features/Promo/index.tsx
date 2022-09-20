@@ -1,11 +1,9 @@
 import { FC } from 'react';
 
 import Cover from 'assets/images/promo.jpg';
-import { useTitle } from 'ahooks';
-import { appName } from 'constants/app';
+import { Button } from 'components/shared/Button';
 
 import classes from './Promo.module.scss';
-import { Button } from 'components/shared/Button';
 
 const Promo: FC = () => (
   <section className={classes.promo}>
@@ -17,9 +15,9 @@ const Promo: FC = () => (
         мире, где люди часто оказываются куда коварнее чудовищ.
       </p>
 
-      <Button>Смотреть сериал</Button>
+      <Button variant="primary">Смотреть сериал</Button>
 
-      <img src={Cover} alt="Обложка" />
+      <img alt="Обложка" src={Cover} />
     </div>
   </section>
 );
