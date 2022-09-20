@@ -1,19 +1,17 @@
 @import 'assets/scss/mixins';
 
 .container {
-  max-width: $mobile-width;
+  max-width: $tablet-width;
   margin: 0 auto;
   width: 80%;
 
   @include tablet {
     max-width: $tablet-width;
-    width: 100%;
     padding: 0 80px;
   }
 
   @include desktop {
     max-width: $desktop-width;
-    width: 100%;
     padding: 0 80px;
   }
 

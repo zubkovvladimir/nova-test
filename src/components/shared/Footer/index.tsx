@@ -10,30 +10,35 @@ import { appName } from 'constants/app';
 
 import classes from './Footer.module.scss';
 import { Button } from '../Button';
+import { Container } from '../Container';
 
 const Footer: FC = () => (
   <footer className={classes.footer}>
-    <img alt="Ведьмак" src={HeaderLogo} />
+    <Container>
+      <div className={classes.footer__inner}>
+        <img alt="Ведьмак" src={HeaderLogo} />
 
-    <Button>Политика обработки персональных данных</Button>
+        <Button>Политика обработки персональных данных</Button>
 
-    <ul>
-      <li>
-        <a href="/">
-          <Inst />
-        </a>
-      </li>
-      <li>
-        <a href="/">
-          <FB />
-        </a>
-      </li>
-      <li>
-        <a href="/">
-          <VK />
-        </a>
-      </li>
-    </ul>
+        <ul className={classes.footer__social}>
+          <li>
+            <a href="/">
+              <Inst />
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <FB />
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <VK />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </Container>
   </footer>
 );
 

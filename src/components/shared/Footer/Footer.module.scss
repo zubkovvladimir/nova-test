@@ -1,3 +1,12 @@
 .footer {
   background-color: var(--gray);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social {
+    display: flex;
+  }
 }

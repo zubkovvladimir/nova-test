@@ -5,18 +5,11 @@ import { Routes } from 'constants/routes';
 import Header from 'components/shared/Header';
 import Footer from 'components/shared/Footer';
 
-const MainLayout: FC = () => {
-  const toggle = () => {
-    console.log('sdsd');
-  };
-
-  return (
-    <div>
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
-  );
-};
-
+const MainLayout: FC = () => (
+  <>
+    <Header />
+    <Outlet />
+    <Footer />
+  </>
+);
 export default MainLayout;
