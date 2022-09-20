@@ -1,3 +1,5 @@
+@import 'variables';
+
 @function rem($pixels, $context: $base-font-size) {
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;

@@ -23,6 +23,10 @@
 
   // transitions
   --transition-fast: 0.3s;
+
+  // размер шрифта
+  --base-font-size: 16px;
+  --big-font-size: 56;
 }
 
 html {
@@ -68,8 +72,4 @@ input[type='radio'].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.test {
-  font-size: rem(56);
 }

@@ -6,8 +6,8 @@
   background-color: transparent;
   color: inherit;
   font-weight: inherit;
-  padding: 12px 32px;
   transition: var(--transition-fast);
+  outline: none;
 
   &--outlined {
     background-color: var(--orange-opacity-015);
@@ -31,5 +31,13 @@
       box-shadow: --var(--shadow-orange-opacity-015);
       background-color: var(--orange);
     }
+  }
+
+  &--small {
+    padding: 12px 32px;
+  }
+
+  &--normal {
+    padding: 16px 42px;
   }
 }
