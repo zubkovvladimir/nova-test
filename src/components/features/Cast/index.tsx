@@ -1,15 +1,7 @@
 import { FC, useState } from 'react';
 
-import ciri from 'assets/images/avatars/ciri.jpg';
-import ciriWebP from 'assets/images/avatars/ciri.webp';
-import emgir from 'assets/images/avatars/emgir.jpg';
-import emgirWebP from 'assets/images/avatars/emgir.webp';
-import enifer from 'assets/images/avatars/enifer.jpg';
-import eniferWebP from 'assets/images/avatars/enifer.webp';
 import geralt from 'assets/images/avatars/geralt.jpg';
 import geraltWebP from 'assets/images/avatars/geralt.webp';
-import lutik from 'assets/images/avatars/lutik.jpg';
-import lutiktWebP from 'assets/images/avatars/lutik.webp';
 import classNames from 'classnames';
 import { Container } from 'components/shared/Container';
 import { swiperConfigBreakpoints } from 'constants/swiper';
@@ -31,7 +23,7 @@ const Cast: FC = () => {
   };
 
   return (
-    <section>
+    <section className={classes.cast}>
       <div className={classes['cast__swiper-shade']}>
         <Container>
           <div className={classes.cast__top}>
