@@ -2,5 +2,79 @@
 @import 'assets/scss/mixins';
 
 .btn {
-  font-weight: normal;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  font-weight: inherit;
+  transition: var(--transition-fast);
+  outline: none;
+  border: none;
+
+  &--outlined {
+    background-color: var(--orange-opacity-015);
+    border: 1px solid var(--orange-opacity-08);
+
+    min-width: 208px;
+
+    &:hover {
+      box-shadow: --var(--shadow-orange-opacity-015);
+      background-color: var(--orange);
+    }
+  }
+
+  &--primary {
+    background-color: var(--orange-1);
+    border: 1px solid var(--orange-opacity-08);
+
+    min-width: 186px;
+    min-height: 48px;
+
+    @include tablet {
+      min-width: 208px;
+      min-height: 56px;
+    }
+
+    &:hover {
+      box-shadow: --var(--shadow-orange-opacity-015);
+      background-color: var(--orange);
+    }
+  }
+
+  &--small {
+    padding: 12px 25px;
+
+    @include tablet {
+      padding: 12px 32px;
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--normal {
+    padding: 16px 33px;
+
+    @include tablet {
+      padding: 16px 40px;
+    }
+
+    @include desktop {
+      padding: 12px 32px;
+    }
+  }
+
+  &--link {
+    font-size: rem(14);
+    font-weight: 400;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &--underline {
+    border-bottom: 1px solid var(--white);
+  }
 }

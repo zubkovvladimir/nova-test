@@ -5,13 +5,29 @@
 @import 'variables';
 @import 'mixins';
 @import 'functions';
+@import './blocks/title';
 
 :root {
+  // colors
   --white: rgba(255, 255, 255, 1);
   --black: rgba(0, 0, 0, 1);
   --black-1: rgba(24, 24, 24, 1);
   --gray: rgba(52, 51, 56, 1);
   --gray-1: rgba(133, 139, 138, 1);
+  --orange: rgba(255, 30, 30, 1);
+  --orange-1: rgba(236, 63, 63, 1);
+  --orange-opacity-08: rgba(236, 63, 63, 0.8);
+  --orange-opacity-015: rgba(236, 63, 63, 0.15);
+
+  // shadows
+  --shadow-orange-opacity-015: rgba(236, 63, 63, 0.15);
+
+  // transitions
+  --transition-fast: 0.3s;
+
+  // размер шрифта
+  --base-font-size: 16px;
+  --big-font-size: 56;
 }
 
 html {
@@ -19,8 +35,8 @@ html {
 }
 
 *,
-::before,
-::after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -43,6 +59,25 @@ img {
   height: auto;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  &::after {
+    font-size: 31px !important;
+    color: var(--orange-1);
+    transform: rotate(180deg);
+  }
+}
+
+.swiper-button-disabled::after {
+  color: white;
+}
+
+.swiper-button-next.swiper-button-prev {
+  &::after {
+    display: none;
+  }
+}
+
 // безопасное скрытие элемента
 .visually-hidden:not(:focus):not(:active),
 input[type='checkbox'].visually-hidden,
@@ -57,8 +92,4 @@ input[type='radio'].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.test {
-  font-size: rem(56);
 }

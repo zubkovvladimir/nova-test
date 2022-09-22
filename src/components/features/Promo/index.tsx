@@ -1,26 +1,30 @@
 import { FC } from 'react';
 
-import Cover from 'assets/images/promo.jpg';
-import { useTitle } from 'ahooks';
-import { appName } from 'constants/app';
+import { Button } from 'components/shared/Button';
+import { Container } from 'components/shared/Container';
 
 import classes from './Promo.module.scss';
-import { Button } from 'components/shared/Button';
 
 const Promo: FC = () => (
   <section className={classes.promo}>
-    <div>
-      <h2 className="test">Сериал Ведьмак</h2>
+    <div className={classes.promo__filter} />
 
-      <p>
-        Геральт из Ривии, наемный охотник за чудовищами, перенесший мутации, идет навстречу своей судьбе в неспокойном
-        мире, где люди часто оказываются куда коварнее чудовищ.
-      </p>
+    <Container>
+      <div className={classes.promo__inner}>
+        <div className={classes.promo__info}>
+          <h2 className={classes.promo__title}>Сериал Ведьмак</h2>
 
-      <Button>Смотреть сериал</Button>
+          <p className={classes.promo__description}>
+            Геральт из Ривии, наемный охотник за чудовищами, перенесший мутации, идет навстречу своей судьбе в
+            неспокойном мире, где люди часто оказываются куда коварнее чудовищ.
+          </p>
 
-      <img src={Cover} alt="Обложка" />
-    </div>
+          <Button size="normal" variant="primary">
+            Смотреть сериал
+          </Button>
+        </div>
+      </div>
+    </Container>
   </section>
 );
 

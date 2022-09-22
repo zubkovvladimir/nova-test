@@ -1,39 +1,43 @@
 import { FC } from 'react';
 
-import { ReactComponent as Inst } from 'assets/images/icons/inst.svg';
 import { ReactComponent as FB } from 'assets/images/icons/fb.svg';
+import { ReactComponent as Inst } from 'assets/images/icons/inst.svg';
 import { ReactComponent as VK } from 'assets/images/icons/vk.svg';
-import HeaderLogo from 'assets/images/logo.png';
-// import HeaderLogo from 'assets/images/logo.png';
-import { useTitle } from 'ahooks';
-import { appName } from 'constants/app';
 
-import classes from './Footer.module.scss';
 import { Button } from '../Button';
+import { Container } from '../Container';
+import Logo from '../Logo';
+import classes from './Footer.module.scss';
 
 const Footer: FC = () => (
   <footer className={classes.footer}>
-    <img alt="Ведьмак" src={HeaderLogo} />
+    <Container>
+      <div className={classes.footer__inner}>
+        <Logo />
 
-    <Button>Политика обработки персональных данных</Button>
+        <span className={classes.footer__privacy}>
+          <Button variant="link">Политика обработки персональных данных</Button>
+        </span>
 
-    <ul>
-      <li>
-        <a href="/">
-          <Inst />
-        </a>
-      </li>
-      <li>
-        <a href="/">
-          <FB />
-        </a>
-      </li>
-      <li>
-        <a href="/">
-          <VK />
-        </a>
-      </li>
-    </ul>
+        <ul className={classes.footer__social}>
+          <li className={classes['footer__social-item']}>
+            <a className={classes.footer__link} href="/">
+              <Inst />
+            </a>
+          </li>
+          <li className={classes['footer__social-item']}>
+            <a className={classes.footer__link} href="/">
+              <FB />
+            </a>
+          </li>
+          <li className={classes['footer__social-item']}>
+            <a className={classes.footer__link} href="/">
+              <VK />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </Container>
   </footer>
 );
 

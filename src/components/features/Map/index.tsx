@@ -1,14 +1,16 @@
 import { FC } from 'react';
 
-import geraltWebP from 'assets/images/avatars/geralt.webp';
-import map from 'assets/images/map.png';
-import { Button } from 'components/shared/Button';
+import { Container } from 'components/shared/Container';
+
+import classes from './Map.module.scss';
 
 const Map: FC = () => (
-  <section>
-    <h2>Магазины мерча ведьмака</h2>
+  <section className={classes.map}>
+    <Container>
+      <h2 className="title --mb-40">Магазины мерча ведьмака</h2>
+    </Container>
 
-    <img alt="Карта" src={map} />
+    <div className={classes.map__wrapper} />
   </section>
 );
 

@@ -20,6 +20,6 @@
     "resolveJsonModule": true,
     "baseUrl": "./src"
   },
-  "include": ["global.d.ts", "yup.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["global.d.ts", "yup.d.ts", "**/*.ts", "**/*.tsx", "src/utils/fancybox.js"],
   "exclude": ["node_modules", "webpack/**/*", "**/*.spec.ts"]
 }

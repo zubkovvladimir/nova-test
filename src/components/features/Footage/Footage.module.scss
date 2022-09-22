@@ -1,0 +1,59 @@
+@import 'assets/scss/mixins';
+@import 'assets/scss/variables';
+
+.footage {
+  margin-bottom: 64px;
+
+  &__gallery {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+
+      gap: 16px;
+
+      height: 312px;
+      margin-bottom: 32px;
+    }
+
+    @include desktop {
+      height: 588px;
+      gap: 24px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 16px;
+
+    @include tablet {
+      margin-bottom: 0px;
+      width: 148px;
+      height: 148px;
+    }
+
+    @include desktop {
+      width: 282px;
+      height: 282px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__first-img {
+    margin-bottom: 16px;
+
+    @include tablet {
+      margin-bottom: 0px;
+    }
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}

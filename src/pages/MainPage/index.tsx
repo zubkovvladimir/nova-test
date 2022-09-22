@@ -1,14 +1,11 @@
 import { FC } from 'react';
 
 import { useTitle } from 'ahooks';
-import { appName } from 'constants/app';
-
-import classes from './MainPage.module.scss';
-import Header from 'components/shared/Header';
-import Promo from 'components/features/Promo';
 import Cast from 'components/features/Cast';
 import Footage from 'components/features/Footage';
 import Map from 'components/features/Map';
+import Promo from 'components/features/Promo';
+import { appName } from 'constants/app';
 
 const MainPage: FC = () => {
   useTitle(`${appName} | Главная`);

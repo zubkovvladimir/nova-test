@@ -1,16 +1,21 @@
 import { FC } from 'react';
 
-import HeaderLogo from 'assets/images/logo.png';
-import { useTitle } from 'ahooks';
-import { appName } from 'constants/app';
-
-import classes from './Header.module.scss';
 import { Button } from '../Button';
+import { Container } from '../Container';
+import Logo from '../Logo';
+import classes from './Header.module.scss';
 
 const Header: FC = () => (
   <header className={classes.header}>
-    <img alt="Ведьмак" src={HeaderLogo} />
-    <Button>Подключить подписку</Button>
+    <Container>
+      <div className={classes.header__inner}>
+        <Logo />
+
+        <Button size="small" variant="outlined">
+          Подключить подписку
+        </Button>
+      </div>
+    </Container>
   </header>
 );
 

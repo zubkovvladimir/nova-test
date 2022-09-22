@@ -1,0 +1,27 @@
+@import 'assets/scss/functions';
+@import 'assets/scss/mixins';
+
+.map {
+  &__wrapper {
+    background-image: url('assets/images/map-2.png');
+    background-repeat: no-repeat;
+    background-color: var(--gray-1);
+    background-size: cover;
+    background-position-x: 64%;
+    background-position-y: 50%;
+
+    min-height: 400px;
+
+    @include tablet {
+      background-image: url('assets/images/map-1.png');
+    }
+
+    @include desktop {
+      background-image: url('assets/images/map.png');
+      min-height: 540px;
+      margin: 0 auto;
+      max-width: 1200px;
+      margin-bottom: 96px;
+    }
+  }
+}

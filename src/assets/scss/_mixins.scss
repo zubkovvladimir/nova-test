@@ -1,27 +1,27 @@
-@import "./variables";
+@import './variables';
 
-@mixin for-phone-only {
-  @media (max-width: $sm) {
+@mixin mobile {
+  @media (min-width: $mobile-width) {
     @content;
   }
 }
-@mixin for-tablet-portrait-up {
-  @media (min-width: $md) {
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
     @content;
   }
 }
-@mixin for-tablet-landscape-up {
-  @media (min-width: $lg) {
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
     @content;
   }
 }
-@mixin for-desktop-up {
-  @media (min-width: $xl) {
-    @content;
-  }
-}
-@mixin for-big-desktop-up {
-  @media (min-width: $xxl) {
-    @content;
-  }
+
+@mixin pseudo($width, $height, $content: '', $repeat: no-repeat) {
+  content: $content;
+  position: absolute;
+  background-repeat: $repeat;
+  width: $width;
+  height: $height;
 }

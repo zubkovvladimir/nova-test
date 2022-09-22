@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import classes from './Button.module.scss';
 
-type ButtonVariant = 'primary' | 'outlined';
+type ButtonVariant = 'primary' | 'outlined' | 'link' | 'empty';
 
 type ButtonSize = 'normal' | 'small';
 
@@ -16,7 +16,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className = '', type, variant = 'primary', fullWidth = false, size, children, disabled, ...props }, ref) => (
+  ({ className = '', type, variant = 'empty', fullWidth = false, size, children, disabled, ...props }, ref) => (
     <button
       className={cx(classes.btn, classes[`btn--${variant}`], classes[`btn--${size}`], {
         [classes['btn--full-width']]: fullWidth,
@@ -28,7 +28,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       type={type}
       {...props}
     >
-      {children}
+      <span
+        className={cx({
+          [classes['btn--underline']]: variant === 'link',
+        })}
+      >
+        {children}
+      </span>
     </button>
   ),
 );
