@@ -26,7 +26,13 @@
     background-color: var(--orange-1);
     border: 1px solid var(--orange-opacity-08);
 
-    min-width: 208px;
+    min-width: 186px;
+    min-height: 48px;
+
+    @include tablet {
+      min-width: 208px;
+      min-height: 56px;
+    }
 
     &:hover {
       box-shadow: --var(--shadow-orange-opacity-015);

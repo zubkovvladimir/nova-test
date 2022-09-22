@@ -17,7 +17,6 @@
   &__social {
     display: flex;
     align-items: center;
-    margin-left: 50%;
 
     @include tablet {
       margin: 0;
@@ -27,6 +26,7 @@
   &__privacy {
     order: 2;
     margin-top: 26px;
+    width: 100%;
 
     @include tablet {
       order: 0;

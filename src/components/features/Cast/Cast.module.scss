@@ -1,8 +1,123 @@
 @import 'assets/scss/mixins';
+@import 'assets/scss/variables';
 
 .cast {
+  margin-bottom: 72px;
+
   &__top {
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  &__wrap {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__line {
+    transition: var(--transition-fast);
+    position: absolute;
+    width: 50%;
+    border-top: 2px solid var(--orange-1);
+  }
+
+  &__progress {
+    position: relative;
+  }
+
+  &__fill {
+    opacity: 0.3;
+    border-top: 2px solid var(--white);
+  }
+
+  &__picture {
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__img {
+    height: 280px;
+    width: 216px;
+
+    @include tablet {
+      width: 256px;
+      height: 360px;
+    }
+
+    @include desktop {
+      height: 400px;
+      width: 282px;
+    }
+  }
+
+  &__actor {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__list-item {
+    height: 280px;
+    width: 216px;
+
+    @include tablet {
+      height: 360px;
+      width: 256px;
+    }
+
+    @include desktop {
+      height: 400px;
+      width: 282px;
+    }
+  }
+
+  &__list {
+    // width: 344px;
+
+    @include tablet {
+      width: 704px;
+    }
+
+    @include desktop {
+      width: 1320px;
+    }
+  }
+
+  // &__swiper-shade {
+  //   // width: 100%;
+  //   overflow: hidden;
+  //   margin: 0 auto;
+
+  //   @include tablet {
+  //     width: 768px;
+  //   }
+
+  //   @include desktop {
+  //     width: 1440px;
+  //   }
+  // }
+
+  &__controls {
+    position: relative;
+    margin-bottom: 24px;
+    margin-right: 32px;
+
+    &--left {
+      margin-right: 38px;
+
+      svg {
+        fill: var(--orange-1);
+      }
+    }
+
+    &--right {
+      svg {
+        fill: var(--orange-1);
+        transition: var(--transition-fast);
+      }
+
+      &:hover svg {
+        fill: var(--orange);
+      }
+    }
   }
 }

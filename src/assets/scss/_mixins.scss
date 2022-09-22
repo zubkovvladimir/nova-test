@@ -17,3 +17,11 @@
     @content;
   }
 }
+
+@mixin pseudo($width, $height, $content: '', $repeat: no-repeat) {
+  content: $content;
+  position: absolute;
+  background-repeat: $repeat;
+  width: $width;
+  height: $height;
+}
