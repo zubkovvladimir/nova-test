@@ -10,25 +10,22 @@ import geralt from 'assets/images/avatars/geralt.jpg';
 import geraltWebP from 'assets/images/avatars/geralt.webp';
 import lutik from 'assets/images/avatars/lutik.jpg';
 import lutiktWebP from 'assets/images/avatars/lutik.webp';
-import { ReactComponent as ArrowLeft } from 'assets/images/icons/arrow-left.svg';
-import { ReactComponent as ArrowRight } from 'assets/images/icons/arrow-right.svg';
-import { Button } from 'components/shared/Button';
+import classNames from 'classnames';
 import { Container } from 'components/shared/Container';
 import { swiperConfigBreakpoints } from 'constants/swiper';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import classes from './Cast.module.scss';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
-import classNames from 'classnames';
 
 const Cast: FC = () => {
   const [progress, setProgress] = useState<string>();
 
   const getProgress = (index: number, amount: number): string => {
-    const progress = (50 / amount) * (index + 1) + 50;
+    const progress = (50 / amount) * (index === 0 ? 0 : index + 1) + 50;
 
     return `${progress > 100 ? 100 : progress}%`;
   };
@@ -70,155 +67,262 @@ const Cast: FC = () => {
             >
               <SwiperSlide>
                 <li className={classes['cast__list-item']}>
-                  <a href="">
-                    <article>
-                      <picture className={classes.cast__picture}>
-                        <source srcSet={geraltWebP} type="image/webp" />
-                        <img alt="geralt" className={classes.cast__img} src={geralt} />
-                      </picture>
+                  <article className={classes['cast__article']}>
+                    <picture className={classes.cast__picture}>
+                      <source srcSet={geraltWebP} type="image/webp" />
+                      <img alt="geralt" className={classes.cast__img} src={geralt} />
+                    </picture>
 
-                      <p className={classes.cast__actor}>
-                        <span>Геральт</span>
-                        <span>Генри Кавилл</span>
-                      </p>
-                    </article>
-                  </a>
+                    <p className={classes.cast__actor}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+                  </article>
+                  <div className={classes.cast__shade}>
+                    <p className={classes['cast__actor-shade']}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+
+                    <p className={classes.cast__desc}>
+                      Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и
+                      бабник
+                    </p>
+                  </div>
                 </li>
               </SwiperSlide>
               <SwiperSlide>
                 <li className={classes['cast__list-item']}>
-                  <a href="">
-                    <article>
-                      <picture className={classes.cast__picture}>
-                        <source srcSet={lutiktWebP} type="image/webp" />
-                        <img alt="lutik" className={classes.cast__img} src={lutik} />
-                      </picture>
+                  <article className={classes['cast__article']}>
+                    <picture className={classes.cast__picture}>
+                      <source srcSet={geraltWebP} type="image/webp" />
+                      <img alt="geralt" className={classes.cast__img} src={geralt} />
+                    </picture>
 
-                      <p className={classes.cast__actor}>
-                        <span>Лютик</span>
-                        <span>Джои Бэти</span>
-                      </p>
-                    </article>
-                  </a>
+                    <p className={classes.cast__actor}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+                  </article>
+                  <div className={classes.cast__shade}>
+                    <p className={classes['cast__actor-shade']}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+
+                    <p className={classes.cast__desc}>
+                      Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и
+                      бабник
+                    </p>
+                  </div>
                 </li>
               </SwiperSlide>
               <SwiperSlide>
                 <li className={classes['cast__list-item']}>
-                  <a href="">
-                    <article>
-                      <picture className={classes.cast__picture}>
-                        <source srcSet={eniferWebP} type="image/webp" />
-                        <img alt="geralt" className={classes.cast__img} src={enifer} />
-                      </picture>
+                  <article className={classes['cast__article']}>
+                    <picture className={classes.cast__picture}>
+                      <source srcSet={geraltWebP} type="image/webp" />
+                      <img alt="geralt" className={classes.cast__img} src={geralt} />
+                    </picture>
 
-                      <p className={classes.cast__actor}>
-                        <span>Йеннифэр</span>
-                        <span>Аня Чалотра</span>
-                      </p>
-                    </article>
-                  </a>
+                    <p className={classes.cast__actor}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+                  </article>
+                  <div className={classes.cast__shade}>
+                    <p className={classes['cast__actor-shade']}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+
+                    <p className={classes.cast__desc}>
+                      Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и
+                      бабник
+                    </p>
+                  </div>
                 </li>
               </SwiperSlide>
               <SwiperSlide>
                 <li className={classes['cast__list-item']}>
-                  <a href="">
-                    <article>
-                      <picture className={classes.cast__picture}>
-                        <source srcSet={ciriWebP} type="image/webp" />
-                        <img alt="geralt" className={classes.cast__img} src={ciri} />
-                      </picture>
+                  <article className={classes['cast__article']}>
+                    <picture className={classes.cast__picture}>
+                      <source srcSet={geraltWebP} type="image/webp" />
+                      <img alt="geralt" className={classes.cast__img} src={geralt} />
+                    </picture>
 
-                      <p className={classes.cast__actor}>
-                        <span>Цири</span>
-                        <span>Фрейя Аллан</span>
-                      </p>
-                    </article>
-                  </a>
+                    <p className={classes.cast__actor}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+                  </article>
+                  <div className={classes.cast__shade}>
+                    <p className={classes['cast__actor-shade']}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+
+                    <p className={classes.cast__desc}>
+                      Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и
+                      бабник
+                    </p>
+                  </div>
                 </li>
               </SwiperSlide>
               <SwiperSlide>
                 <li className={classes['cast__list-item']}>
-                  <a href="">
-                    <article>
-                      <picture className={classes.cast__picture}>
-                        <source srcSet={emgirWebP} type="image/webp" />
-                        <img alt="geralt" className={classes.cast__img} src={emgir} />
-                      </picture>
+                  <article className={classes['cast__article']}>
+                    <picture className={classes.cast__picture}>
+                      <source srcSet={geraltWebP} type="image/webp" />
+                      <img alt="geralt" className={classes.cast__img} src={geralt} />
+                    </picture>
 
-                      <p className={classes.cast__actor}>
-                        <span>Эмгыр вар Эмрейс</span>
-                        <span>Барт Эдвардс</span>
-                      </p>
-                    </article>
-                  </a>
+                    <p className={classes.cast__actor}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+                  </article>
+                  <div className={classes.cast__shade}>
+                    <p className={classes['cast__actor-shade']}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+
+                    <p className={classes.cast__desc}>
+                      Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и
+                      бабник
+                    </p>
+                  </div>
                 </li>
               </SwiperSlide>
               <SwiperSlide>
                 <li className={classes['cast__list-item']}>
-                  <a href="">
-                    <article>
-                      <picture className={classes.cast__picture}>
-                        <source srcSet={geraltWebP} type="image/webp" />
-                        <img alt="geralt" className={classes.cast__img} src={geralt} />
-                      </picture>
+                  <article className={classes['cast__article']}>
+                    <picture className={classes.cast__picture}>
+                      <source srcSet={geraltWebP} type="image/webp" />
+                      <img alt="geralt" className={classes.cast__img} src={geralt} />
+                    </picture>
 
-                      <p className={classes.cast__actor}>
-                        <span>Геральт</span>
-                        <span>Генри Кавилл</span>
-                      </p>
-                    </article>
-                  </a>
+                    <p className={classes.cast__actor}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+                  </article>
+                  <div className={classes.cast__shade}>
+                    <p className={classes['cast__actor-shade']}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+
+                    <p className={classes.cast__desc}>
+                      Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и
+                      бабник
+                    </p>
+                  </div>
                 </li>
               </SwiperSlide>
               <SwiperSlide>
                 <li className={classes['cast__list-item']}>
-                  <a href="">
-                    <article>
-                      <picture className={classes.cast__picture}>
-                        <source srcSet={geraltWebP} type="image/webp" />
-                        <img alt="geralt" className={classes.cast__img} src={geralt} />
-                      </picture>
+                  <article className={classes['cast__article']}>
+                    <picture className={classes.cast__picture}>
+                      <source srcSet={geraltWebP} type="image/webp" />
+                      <img alt="geralt" className={classes.cast__img} src={geralt} />
+                    </picture>
 
-                      <p className={classes.cast__actor}>
-                        <span>Геральт</span>
-                        <span>Генри Кавилл</span>
-                      </p>
-                    </article>
-                  </a>
+                    <p className={classes.cast__actor}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+                  </article>
+                  <div className={classes.cast__shade}>
+                    <p className={classes['cast__actor-shade']}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+
+                    <p className={classes.cast__desc}>
+                      Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и
+                      бабник
+                    </p>
+                  </div>
                 </li>
               </SwiperSlide>
               <SwiperSlide>
                 <li className={classes['cast__list-item']}>
-                  <a href="">
-                    <article>
-                      <picture className={classes.cast__picture}>
-                        <source srcSet={geraltWebP} type="image/webp" />
-                        <img alt="geralt" className={classes.cast__img} src={geralt} />
-                      </picture>
+                  <article className={classes['cast__article']}>
+                    <picture className={classes.cast__picture}>
+                      <source srcSet={geraltWebP} type="image/webp" />
+                      <img alt="geralt" className={classes.cast__img} src={geralt} />
+                    </picture>
 
-                      <p className={classes.cast__actor}>
-                        <span>Геральт</span>
-                        <span>Генри Кавилл</span>
-                      </p>
-                    </article>
-                  </a>
+                    <p className={classes.cast__actor}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+                  </article>
+                  <div className={classes.cast__shade}>
+                    <p className={classes['cast__actor-shade']}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+
+                    <p className={classes.cast__desc}>
+                      Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и
+                      бабник
+                    </p>
+                  </div>
                 </li>
               </SwiperSlide>
               <SwiperSlide>
                 <li className={classes['cast__list-item']}>
-                  <a href="">
-                    <article>
-                      <picture className={classes.cast__picture}>
-                        <source srcSet={geraltWebP} type="image/webp" />
-                        <img alt="geralt" className={classes.cast__img} src={geralt} />
-                      </picture>
+                  <article className={classes['cast__article']}>
+                    <picture className={classes.cast__picture}>
+                      <source srcSet={geraltWebP} type="image/webp" />
+                      <img alt="geralt" className={classes.cast__img} src={geralt} />
+                    </picture>
 
-                      <p className={classes.cast__actor}>
-                        <span>Геральт</span>
-                        <span>Генри Кавилл</span>
-                      </p>
-                    </article>
-                  </a>
+                    <p className={classes.cast__actor}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+                  </article>
+                  <div className={classes.cast__shade}>
+                    <p className={classes['cast__actor-shade']}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+
+                    <p className={classes.cast__desc}>
+                      Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и
+                      бабник
+                    </p>
+                  </div>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className={classes['cast__list-item']}>
+                  <article className={classes['cast__article']}>
+                    <picture className={classes.cast__picture}>
+                      <source srcSet={geraltWebP} type="image/webp" />
+                      <img alt="geralt" className={classes.cast__img} src={geralt} />
+                    </picture>
+
+                    <p className={classes.cast__actor}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+                  </article>
+                  <div className={classes.cast__shade}>
+                    <p className={classes['cast__actor-shade']}>
+                      <span>Геральт</span>
+                      <span className={classes.cast__name}>Генри Кавилл</span>
+                    </p>
+
+                    <p className={classes.cast__desc}>
+                      Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и
+                      бабник
+                    </p>
+                  </div>
                 </li>
               </SwiperSlide>
             </Swiper>
