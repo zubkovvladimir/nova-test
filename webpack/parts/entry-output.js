@@ -11,7 +11,7 @@ function getEntryOutput() {
   return {
     entry: path.resolve(__dirname, '../../src', 'index.tsx'),
     output: {
-      filename: isProd ? '[name].js' : '[name].[contenthash].js',
+      filename: isProd ? 'novatest/[name].js' : '[name].[contenthash].js',
       path: path.resolve(__dirname, '../../build'),
       publicPath: '/',
     },
