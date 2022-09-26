@@ -2,6 +2,7 @@
   "name": "nova-test",
   "private": true,
   "author": "https://github.com/zubkovvladimir",
+  "homepage": "https://zubkovvladimir.github.io/novatest/",
   "license": "ISC",
   "scripts": {
     "dev": "yarn run kill-port 7777 & cross-env NODE_ENV=development webpack serve --config webpack/webpack.config.js",
