@@ -9,7 +9,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 function getMiniCssExtractPlugin() {
   return new MiniCssExtractPlugin({
     filename: '[name].css',
-    chunkFilename: 'novatest/[id].[name].css',
+    chunkFilename: '[id].[name].css',
   });
 }
 
